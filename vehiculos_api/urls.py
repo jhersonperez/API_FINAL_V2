@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from vehiculos.views import *
+from django.http import HttpResponse
 
 router = DefaultRouter()
 router.register('marcas', MarcaViewSet)
@@ -31,5 +32,6 @@ router.register('ventas', VentaViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', lambda request: HttpResponse("Hola"), name='home'),
     path('api/', include(router.urls)),
 ]
