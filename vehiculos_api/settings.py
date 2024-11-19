@@ -102,9 +102,12 @@ WSGI_APPLICATION = 'vehiculos_api.wsgi.application'
 #    }
 
 DATABASES = {
-    'default': dj_database_url.config( 
-        default='postgresql://consecionario_1_user:A7vdXsn5FJGvNViVDiB3QRWiu1rAtt02@dpg-csu8a5hu0jms738lucf0-a/consecionario_1'
-       )
+    'default': dj_database_url.config(
+        
+        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        conn_max_age=600
+    )
+    
 }
 
 # Password validation
