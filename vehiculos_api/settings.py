@@ -83,24 +83,28 @@ WSGI_APPLICATION = 'vehiculos_api.wsgi.application'
 
 # Database documentation https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-ENVIRONMENT = os.getenv('DJANGO_ENV', 'development')
+#ENVIRONMENT = os.getenv('DJANGO_ENV', 'development')
 
-if ENVIRONMENT == 'development':
+#if ENVIRONMENT == 'development':
     # Configuración de SQLite en desarrollo
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-else:
+    #DATABASES = {
+    #    'default': {
+    #        'ENGINE': 'django.db.backends.sqlite3',
+    #       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #    }
+    #}
+#else:
     # Configuración de base de datos en producción usando dj_database_url
-    DATABASES = {
-        'default': dj_database_url.config(
-            default='postgresql://consecionario_user:IuRvSSURLkHhk1BlWbgfnmIB8bxLpwiS@dpg-cstd55lumphs73fnobtg-a/consecionario'  # Asegúrate de configurar tu URL de la base de datos aquí
-        )
-    }
-
+#    DATABASES = {
+#        'default': dj_database_url.config(
+#            default='postgresql://consecionario_user:IuRvSSURLkHhk1BlWbgfnmIB8bxLpwiS@dpg-cstd55lumphs73fnobtg-a/consecionario'  # Asegúrate de configurar tu URL de la base de datos aquí
+#        )
+#    }
+DATABASES = {
+    'default': dj_database_url.config( 
+        default='postgresql://consecionario_1_user:A7vdXsn5FJGvNViVDiB3QRWiu1rAtt02@dpg-csu8a5hu0jms738lucf0-a/consecionario_1'
+       )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
