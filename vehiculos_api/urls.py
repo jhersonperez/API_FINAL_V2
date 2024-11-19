@@ -32,6 +32,6 @@ router.register('ventas', VentaViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', lambda request: HttpResponse("Hola"), name='home'),
+    #path('', lambda request: HttpResponse("Hola"), name='home'),
     path('api/', include(router.urls)),
 ]
