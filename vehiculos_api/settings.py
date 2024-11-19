@@ -100,6 +100,7 @@ WSGI_APPLICATION = 'vehiculos_api.wsgi.application'
 #            default='postgresql://consecionario_user:IuRvSSURLkHhk1BlWbgfnmIB8bxLpwiS@dpg-cstd55lumphs73fnobtg-a/consecionario'  # Asegúrate de configurar tu URL de la base de datos aquí
 #        )
 #    }
+
 DATABASES = {
     'default': dj_database_url.config( 
         default='postgresql://consecionario_1_user:A7vdXsn5FJGvNViVDiB3QRWiu1rAtt02@dpg-csu8a5hu0jms738lucf0-a/consecionario_1'
