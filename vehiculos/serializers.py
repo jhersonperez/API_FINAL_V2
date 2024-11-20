@@ -3,7 +3,7 @@ from .models import *
 
 class MarcaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Marca
+        model = Marcas
         fields = '__all__'
 
 class ModeloSerializer(serializers.ModelSerializer):

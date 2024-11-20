@@ -1,6 +1,6 @@
 from django.db import models
 
-class Marca(models.Model):
+class Marcas(models.Model):
     mar_nombre = models.CharField(max_length=45)
 
 class Modelo(models.Model):
