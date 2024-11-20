@@ -1,11 +1,11 @@
 from django.db import models
 
-class Marcas(models.Model):
+class Marca(models.Model):
     mar_nombre = models.CharField(max_length=45)
 
 class Modelo(models.Model):
     mod_nombre = models.CharField(max_length=45)
-    marca = models.ForeignKey(Marcas, on_delete=models.CASCADE)
+    marca = models.ForeignKey(Marca, on_delete=models.CASCADE)
 
 class Version(models.Model):
     ver_nombre = models.CharField(max_length=45)
