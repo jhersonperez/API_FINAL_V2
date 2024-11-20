@@ -3,7 +3,7 @@ from .models import *
 from .serializers import *
 
 class MarcaViewSet(viewsets.ModelViewSet):
-    queryset = Marca.objects.all()
+    queryset = Marcas.objects.all()
     serializer_class = MarcaSerializer
 
 class ModeloViewSet(viewsets.ModelViewSet):
